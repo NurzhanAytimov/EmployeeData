@@ -1,0 +1,33 @@
+﻿@model Employee.Models.Employees
+
+@{
+}
+<h1>Добавить сотрудника</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Имя</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+     <div class="mb-3">
+     <label for="" class="form-label">Фамилия</label>
+        <input type="text" class="form-control" asp-for="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Зарплата</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Департамент</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Дата рождения</label>
+        <input type="date" class="form-control" asp-for="DateBirth">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

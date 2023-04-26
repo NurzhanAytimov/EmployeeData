@@ -1,0 +1,35 @@
+﻿@model List<Employee.Models.Employees>
+@{
+}
+
+<h1>Список сотрудников</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Department</th>
+            <th>DateBirth</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.LastName</td>
+                <td>@employee.Email</td>
+                <td>@employee.Salary</td>
+                <td>@employee.Department</td>
+                <td>@employee.DateBirth.ToString("dd-MM-yyyy")</td>
+                <td><a href="AddEmployees/Edit/@employee.Id">Редактировать</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>

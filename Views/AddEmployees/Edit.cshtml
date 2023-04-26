@@ -1,0 +1,40 @@
+﻿@model Employee.Models.Employees
+@{
+}
+
+<h1>Редактировать</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">ИД</label>
+        <input type="number" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Имя</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Фамилия</label>
+        <input type="text" class="form-control" asp-for="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Зарплата</label>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Департамент</label>
+        <input type="text" class="form-control" asp-for="Department">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Дата рождения</label>
+        <input type="date" class="form-control" asp-for="DateBirth">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="AddEmployees">Удалить</button>
+
+</form>
+
